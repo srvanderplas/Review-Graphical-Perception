@@ -73,14 +73,25 @@ The ``hardware", in this analogy, consists of the neurons that make up the eyes,
 \subsection{Hardware}
 The physiology of perception is complex; what follows is a brief overview of the physiology of perception, focusing on the areas most important to the perception of statistical graphics. This physiological information is important in understanding the difference between the sensation (i.e. the retinal image) and the perception (the corresponding mental representation), which is an important distinction in understanding how statistical graphics are perceived. This overview will entirely ignore the finer details of the organization of the brain: feature detector cells, specific processing units for certain types of visual stimuli, and most of the horrifying or amusing experiments and incidents that led to the understanding of the brain. A more thorough presentation of these aspects of perception can be found in \citet{goldstein}. 
 
-\paragraph{The Eye}
-The eye is a complex apparatus, but for our purposes, the most important component of the eye is the retina, which contains the sensory cells responsible for transforming light waves into electrical information in the form of neural signals. These sensory cells are specialized neurons, known as rods and cones, which perceive light intensity (brightness) and wavelength (color), respectively. One section of the retina, known as the fovea, contains only cones; the rest of the retina contains a mixture of rods and cones. Figure \ref{fig:retina} depicts the structure of the eye with a closeup of the retina. 
-
-\begin{figure}
+\begin{savenotes}
+\begin{figure}[htp]
 \centering
-\includegraphics[width=.8\linewidth, keepaspectratio=TRUE]{Retina}
-\caption[The human eye, with closeup of receptor cells in the retina]{The human eye, with closeup of receptor cells in the retina (image from \protect\citealt{goldstein}, chap 3.1).} \label{fig:retina}
+\begin{subfigure}[c]{.4\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,keepaspectratio=TRUE]{Three_Main_Layers_of_the_Eye}
+  \caption{The Human Eye\protect\footnote{image by Holly Fischer, \href{https://commons.wikimedia.org/wiki/File:Three_Main_Layers_of_the_Eye.png}{Wikimedia Commons}} \label{fig:humanEye}}
+\end{subfigure}
+\begin{subfigure}[c]{.59\linewidth}
+  \centering
+  \includegraphics[width=\linewidth,keepaspectratio=TRUE]{RetinaCells}
+  \caption{Retina Cell Layers\protect\footnote{image modified from version by OpenStax College, \href{https://commons.wikimedia.org/wiki/File:1414_Rods_and_Cones.jpg}{Wikimedia Commons}}}
+\end{subfigure}
+\caption[The human eye, with closeup of receptor cells in the retina]{The human eye, with closeup of receptor cells in the retina.} \label{fig:retina}
 \end{figure}
+\end{savenotes}
+
+\paragraph{The Eye}
+The eye is a complex apparatus, but for our purposes, the most important component of the eye is the retina, which contains the sensory cells responsible for transforming light waves into electrical information in the form of neural signals. These sensory cells are specialized neurons, known as rods and cones, which perceive light intensity (brightness) and wavelength (color), respectively. One section of the retina, known as the fovea, contains only cones; the rest of the retina contains a mixture of rods and cones. Figure \ref{fig:retina} depicts the structure of the eye with a closeup of the retina.
 
 Another important region of the retina is the blind spot, the area where the optic nerve exits the eye to connect the retina to the brain. There are no rods or cones in this region of the retina, and any vision in the region of space that maps onto this point is a result of two mechanisms: binocular vision (the other eye fills in the missing information) and your brain ``filling in" what it believes should be there.
 
