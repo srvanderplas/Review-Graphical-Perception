@@ -319,9 +319,8 @@ The most commonly cited set of heuristics for object perception (and the set mos
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=.9\linewidth]{gestalt}
-\caption[The gestalt laws of perception]{The gestalt laws of perception \protect\footnotemark}\label{fig:gestaltlaws}
+\caption[The gestalt laws of perception]{The gestalt laws of perception.}\label{fig:gestaltlaws}
 \end{figure}
-\protect\footnotetext{From \url{http://yusylvia.files.wordpress.com/2010/03/gestalt_illustration-01.jpg}}
 Figure \ref{fig:gestaltlaws} shows examples of many of the gestalt laws, which when combined help to order our perceptual experience. We have discussed how we attend to visual stimuli and how they are recognized, but for the perceptual experience to be meaningful, previous experiences must be stored into memory in some coherent way. The next section discusses how visual scenes are stored into long-term memory.
 
 \subsubsection{Visual Memory}
