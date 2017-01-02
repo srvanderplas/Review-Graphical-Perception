@@ -20,6 +20,7 @@
 \usepackage{footnote} % table footnotes
 \usepackage{multicol}
 \usepackage{rotating}
+\usepackage{fullpage}
 
 % Bibliography without numbers or labels
 \usepackage{natbib}
@@ -76,15 +77,19 @@ The physiology of perception is complex; what follows is a brief overview of the
 \begin{savenotes}
 \begin{figure}[htp]
 \centering
-\begin{subfigure}[c]{.4\linewidth}
+\begin{subfigure}[b]{.4\linewidth}
   \centering
   \includegraphics[width=\linewidth,keepaspectratio=TRUE]{Three_Main_Layers_of_the_Eye}
-  \caption{The Human Eye\protect\footnote{image by Holly Fischer, \href{https://commons.wikimedia.org/wiki/File:Three_Main_Layers_of_the_Eye.png}{Wikimedia Commons}} \label{fig:humanEye}}
+  \caption{The Human Eye
+  %\protect\footnote{image by Holly Fischer, \href{https://commons.wikimedia.org/wiki/File:Three_Main_Layers_of_the_Eye.png}{Wikimedia Commons}
+  } \label{fig:humanEye}
 \end{subfigure}
-\begin{subfigure}[c]{.59\linewidth}
+\begin{subfigure}[b]{.59\linewidth}
   \centering
   \includegraphics[width=\linewidth,keepaspectratio=TRUE]{RetinaCells}
-  \caption{Retina Cell Layers\protect\footnote{image modified from version by OpenStax College, \href{https://commons.wikimedia.org/wiki/File:1414_Rods_and_Cones.jpg}{Wikimedia Commons}}}
+  \caption{Retina Cell Layers
+  %\protect\footnote{image modified from version by OpenStax College, \href{https://commons.wikimedia.org/wiki/File:1414_Rods_and_Cones.jpg}{Wikimedia Commons}}
+  }
 \end{subfigure}
 \caption[The human eye, with closeup of receptor cells in the retina]{The human eye, with closeup of receptor cells in the retina.} \label{fig:retina}
 \end{figure}
@@ -118,13 +123,15 @@ Figure \ref{fig:ColorRange} shows the responsiveness of rods and each of the thr
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=.8\linewidth, keepaspectratio=TRUE]{AbsorptionSpectra}
-\caption[Absorption spectra of retinal cells]{Absorption spectra of rods and short, medium, and long wave cones.\footnote{image by Maxim Razin, \href{https://commons.wikimedia.org/wiki/File:Cone-response.svg}{Wikimedia Commons}.}.} \label{fig:ColorRange}
+\caption[Absorption spectra of retinal cells]{Absorption spectra of rods and short, medium, and long wave cones.
+%\footnote{image by Maxim Razin, \href{https://commons.wikimedia.org/wiki/File:Cone-response.svg}{Wikimedia Commons}.}
+} \label{fig:ColorRange}
 \end{figure}
 
-As a result, rainbow-style color schemes are seldom appropriate for conveying numerical values, because the correspondance between the perceived information and the displayed information is not accurately maintained by the visual system \citep{rainbowcolor}. In addition, if any of the cones are missing or damaged as a result of genetic mutations, color perception is impaired, resulting in a smaller range of distinguishable colors. This set of impairments is known coloquially as color-blindness, and occurs in an estimated 5\% of the population (approximately 10\% of males, and less than 1\% of females). Color blindness is discussed in more depth in section \ref{colorblindness}.
+As a result, rainbow-style color schemes are seldom appropriate for conveying numerical values, because the correspondance between the perceived information and the displayed information is not accurately maintained by the visual system \citep{rainbowcolor}. In addition, if any of the cones are missing or damaged as a result of genetic mutations, color perception is impaired, resulting in a smaller range of distinguishable colors. This set of impairments is known coloquially as color-blindness, and occurs in an estimated 5\% of the population (approximately 10\% of males, and less than 1\% of females). Color blindness is discussed in more depth in Section \ref{colorblindness}.
 
 \paragraph{The Brain}
-Once light hits the retina and causes a signal in the receptor cells, the information travels along the optic nerve and into the brain. Multiple neighboring rods are connected to the same neuron, where each cone is connected to a single neuron. The combined wiring of rod cells is responsible for the Hermann grid illusion and the Mach bands seen in figure \ref{fig:InhibitionIllusions}. Both of these illusions are a product of lateral inhibition, which is a result of the wiring of rod cells in the retina. Essentially, neurons can only fire at a specific rate, so when neighboring cells are all stimulated simultaneously, the combined neuron cannot fire fast enough to pass on all of the signals, causing ``inhibition". The specifics of this response and its relationship with the wiring of the receptor cells are somewhat complex; a more thorough explanation can be found in \citet{goldstein}, Chapter 3.4.
+Once light hits the retina and causes a signal in the receptor cells, the information travels along the optic nerve and into the brain. Multiple neighboring rods are connected to the same neuron, where each cone is connected to a single neuron. The combined wiring of rod cells is responsible for the Hermann grid illusion and the Mach bands seen in Figure  \ref{fig:InhibitionIllusions}. Both of these illusions are a product of lateral inhibition, which is a result of the wiring of rod cells in the retina. Essentially, neurons can only fire at a specific rate, so when neighboring cells are all stimulated simultaneously, the combined neuron cannot fire fast enough to pass on all of the signals, causing ``inhibition". The specifics of this response and its relationship with the wiring of the receptor cells are somewhat complex; a more thorough explanation can be found in \citet{goldstein}, Chapter 3.4.
 
 \begin{figure}
 \centering
@@ -143,24 +150,26 @@ Once light hits the retina and causes a signal in the receptor cells, the inform
 \end{figure}
 
 Once neural impulses have left the retina through the optic nerve, they travel to the visual cortex by way of several specialized structures within the brain that process lower-level signals. Receptor cells in the visual cortex respond to specific angles, spatial locations, colors, and intensities, and arrays of these special `feature detector cells' process the information into a form that higher-level processes can utilize. These higher-level processes are what we have previously called `software': they are not directly related to the physical brain, but they do process information heuristically to produce higher-level reasoning and conclusions. In the next section, we explore some of the higher-level processes responsible for visual perception.
-
+\FloatBarrier
 \subsection{Software}\label{Software}
 Many of the processes for visual perception run simultaneously; in absence of a strict temporal ordering, we will start with the more basic tasks of visual perception and proceed towards higher-level processes. We will begin with attention.
 
 \subsubsection{Attention and Perception} \label{AttentionPerception}
 In many tasks, it is necessary to pay attention to many parallel input streams simultaneously; this is particularly true for complex tasks like driving a car. These tasks demand divided attention; the brain must process many different sources of information in parallel. By contrast, most image recognition tasks require selective attention, that is, focusing on specific objects and ignoring everything else. The brain accomplishes this attention through several mechanisms.
 
-Selective attention is accomplished by focusing the fovea (the area with the highest visual acuity) on the object. For instance, if the object is a page of text, each word will pass through the fovea, producing a focused stream of visual input. This stream of input consists of saccades (jumps between points of focus) and pauses in which the visual information is relayed to the brain. Figure \ref{fig:saccadestext} shows the saccades (lines) and pauses (circles) resulting when someone scans a paragraph of text. These saccades and pauses are utilized in eye-tracking technology to determine which parts of an image the observer is focusing on (and by extension, which information is being encoded by the brain). Further discussion of eye tracking is provided in section \ref{experimentalmethods}.
+Selective attention is accomplished by focusing the fovea (the area with the highest visual acuity) on the object. For instance, if the object is a page of text, each word will pass through the fovea, producing a focused stream of visual input. This stream of input consists of saccades (jumps between points of focus) and pauses in which the visual information is relayed to the brain. Figure \ref{fig:saccadestext} shows the saccades (lines) and pauses (circles) resulting when someone scans a paragraph of text. These saccades and pauses are utilized in eye-tracking technology to determine which parts of an image the observer is focusing on (and by extension, which information is being encoded by the brain). Further discussion of eye tracking is provided in Section \ref{experimentalmethods}.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.5\linewidth]{SaccadesText}
-\caption[Saccades and pauses]{A plot of saccades made while reading text. Saccades, shown by the lines, indicate ``jumps", while pauses are shown by circles, with size proportional to the time spent focusing on that area.}\label{fig:saccadestext}
+\caption[Saccades and pauses]{A plot of saccades made while reading text. Saccades, shown by the lines, indicate ``jumps", while pauses are shown by circles, with size proportional to the time spent focusing on that area.
+% \protect\footnote{Image by Lucs-kho, \href{https://en.wikipedia.org/wiki/File:Reading_Fixations_Saccades.jpg}{Wikimedia Commons}}
+}\label{fig:saccadestext}
 \end{figure}
 
-Selective attention is generally necessary for perception to occur, though there is some information that is encoded automatically. Experiments such as the fairly famous \href{http://www.theinvisiblegorilla.com/videos.html}{``gorilla" film}\footnote{\url{http://www.theinvisiblegorilla.com/videos.html}} demonstrate that even when there is attention focused on a task, information extraneous to that task is not always encoded, that is, even when participants focused on counting the number of passes between players in the basketball game, they did not notice the gorilla walking through the middle of the court. It is important to understand which parts of a visual stimulus are the focus of a given perceptual task, because most of the information encoded by the brain is a result of selective attention. Eye-tracking can be an important tool useful to understand these perceptual processes, but participants are often able to report which parts of a stimulus contributed to their decision as well.
+Selective attention is generally necessary for perception to occur, though there is some information that is encoded automatically. Experiments such as the fairly famous \href{http://www.theinvisiblegorilla.com/videos.html}{``gorilla" film} (\url{http://bit.ly/1lLV6z1}) demonstrate that even when there is attention focused on a task, information extraneous to that task is not always encoded, that is, even when participants focused on counting the number of passes between players in the basketball game, they did not notice the gorilla walking through the middle of the court. It is important to understand which parts of a visual stimulus are the focus of a given perceptual task, because most of the information encoded by the brain is a result of selective attention. Eye-tracking can be an important tool useful to understand these perceptual processes, but participants are often able to report which parts of a stimulus contributed to their decision as well.
 
-Within the brain, attention is important because it allows different regions of the brain which process color, shape, and position to integrate these perceptions into a multifaceted mental representation of the object \citep{goldstein}. This process, known as binding, is essential to coherently encode a scene into working memory. Feature integration theory \citep{treisman1980feature} suggests that these separate streams of information are initially encoded in the preattentive stage of object perception; focusing on the object triggers the binding of these separate streams into a single coherent stream of information. Many single features, such as color, length, and texture are \emph{preattentive}, because they can be pinpointed in an image without focused attention (and thus can be located faster), but specific combinations of color and shape require attention (because the features must be bound together) and are thus more difficult to search. Preattentive features are generally processed in parallel (that is, the entire scene is processed nearly simultaneously), while features requiring attention are processed serially. Examples of features processed  serially and in parallel are shown in figure \ref{fig:parallelSerialFeatures}, taken from Chapter 6 of \citet{helander1997handbook}. The importance of preattentive processing to statistical graphics is discussed in Section \ref{LowLevelGraphics}, which includes a demonstration of preattentive search in figure \ref{fig:preattentive}.
+Within the brain, attention is important because it allows different regions of the brain which process color, shape, and position to integrate these perceptions into a multifaceted mental representation of the object \citep{goldstein}. This process, known as binding, is essential to coherently encode a scene into working memory. Feature integration theory \citep{treisman1980feature} suggests that these separate streams of information are initially encoded in the preattentive stage of object perception; focusing on the object triggers the binding of these separate streams into a single coherent stream of information. Many single features, such as color, length, and texture are \emph{preattentive}, because they can be pinpointed in an image without focused attention (and thus can be located faster), but specific combinations of color and shape require attention (because the features must be bound together) and are thus more difficult to search. Preattentive features are generally processed in parallel (that is, the entire scene is processed nearly simultaneously), while features requiring attention are processed serially. Examples of features processed  serially and in parallel are shown in Figure  \ref{fig:parallelSerialFeatures} \citep[Chapter 6]{helander1997handbook}. The importance of preattentive processing to statistical graphics is discussed in Section \ref{LowLevelGraphics}, which includes a demonstration of preattentive search in Figure  \ref{fig:preattentive}.
 
 \begin{figure}[htbp]\centering
 <<parallel-serial, echo=F, include=T, fig.width=10, fig.height=7, out.width=".9\\linewidth">>=
