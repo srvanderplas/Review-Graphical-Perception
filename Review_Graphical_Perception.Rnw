@@ -26,7 +26,7 @@
 \bibliographystyle{apa}
 
 %Optional Package to add PDF bookmarks and hypertext links
-\usepackage[pdftex,hypertexnames=false,linktocpage=true]{hyperref}
+\usepackage[hypertexnames=false,linktocpage=true]{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue,anchorcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue,bookmarksnumbered=true,pdfview=FitB}
 
 %---------------------------------------------------
@@ -82,7 +82,7 @@ The eye is a complex apparatus, but for our purposes, the most important compone
 \caption[The human eye, with closeup of receptor cells in the retina]{The human eye, with closeup of receptor cells in the retina (image from \protect\citealt{goldstein}, chap 3.1).} \label{fig:retina}
 \end{figure}
 
-Another important region of the retina is the blindspot, the area where the optic nerve exits the eye to connect the retina to the brain. There are no rods or cones in this region of the retina, and any vision in the region of space that maps onto this point is a result of two mechanisms: binocular vision (the other eye fills in the missing information) and your brain ``filling in" what it believes should be there.
+Another important region of the retina is the blind spot, the area where the optic nerve exits the eye to connect the retina to the brain. There are no rods or cones in this region of the retina, and any vision in the region of space that maps onto this point is a result of two mechanisms: binocular vision (the other eye fills in the missing information) and your brain ``filling in" what it believes should be there.
 
 \begin{figure}[htbp]\centering
 \begin{center}
@@ -101,7 +101,7 @@ Figure \ref{fig:ColorRange} shows the responsiveness of rods and each of the thr
 
 \begin{figure}[htbp]\centering
 \includegraphics[width=.6\linewidth, keepaspectratio=TRUE]{AbsorptionSpectra}
-\caption[Absorption spectra of retinal cells]{Absorption spectra of rods and short, medium, and long wave cones. (image from \protect\citealt{goldstein}, chap 3.3).} \label{fig:ColorRange}
+\caption[Absorption spectra of retinal cells]{Absorption spectra of rods and short, medium, and long wave cones.\footnote{image by Maxim Razin, \href{https://commons.wikimedia.org/wiki/File:Cone-response.svg}{Wikimedia Commons}.}.} \label{fig:ColorRange}
 \end{figure}
 
 As a result, rainbow-style color schemes are seldom appropriate for conveying numerical values, because the correspondance between the perceived information and the displayed information is not accurately maintained by the visual system \citep{rainbowcolor}. In addition, if any of the cones are missing or damaged as a result of genetic mutations, color perception is impaired, resulting in a smaller range of distinguishable colors. This set of impairments is known coloquially as color-blindness, and occurs in an estimated 5\% of the population (approximately 10\% of males, and less than 1\% of females). Color blindness is discussed in more depth in section \ref{colorblindness}. 
@@ -710,7 +710,7 @@ qplot(x=x, y=y, geom="line", linetype='Detection Curve', color='Detection Curve'
   scale_linetype_manual("", values=c(1, 2, 1)) + 
   scale_colour_manual("", values=c("black", "black", "red")) +
 #   geom_text(aes(x=2, y=.41, label="Threshold"), vjust=-.1, show_guide=F) + 
-  geom_text(aes(x=rep(observations, times=3), y=rep(c(-.1, -.2, -.3), each=length(observations)), label=answers), vjust=-.5, hjust=.5, show_guide=F, aes.inherit=F) +   
+  geom_text(aes(x=rep(observations, times=3), y=rep(c(-.1, -.2, -.3), each=length(observations)), label=answers), vjust=-.5, hjust=.5, show_guide=F, inherit.aes=F) +   
   xlab("Stimulus Intensity") + 
   ylab("Stimulus Detection") + 
   ggtitle("Method of Limits") + 
