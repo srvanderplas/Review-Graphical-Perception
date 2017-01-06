@@ -126,10 +126,10 @@ Another important region of the retina is the blind spot, shown in Figure  \ref{
 \begin{center}
 \fbox{
 \begin{minipage}[c]{5in}
-\vspace{2cm}
+\vspace{1cm}
 \Large
 \hfill\textbf{R}\hspace{3in}\textbf{L}\hfill
-\vspace{2cm}
+\vspace{1cm}
 \end{minipage}}
 \end{center}
 \caption[Demonstration of the blind spot in the retina]{Demonstration of the blind spot in the retina. Close one eye, and focus the other on the appropriate letter (R if the right eye is still open, L if the left eye is still open). Place the paper approximately 1 foot from your eye, and move the paper toward or away from your face until you notice the other letter disappear. Your brain ``fills in" the other letter with the background.}\label{fig:blindspot}
