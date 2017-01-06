@@ -669,8 +669,9 @@ library(ggplot2)
 qplot(data=data, x=x, y=y) +
   theme_bw()
 
-qplot(data=data, x=x, y=y, color=group) +
+qplot(data=data, x=x, y=y, color=group, shape = group) +
   scale_color_brewer(palette="Set1", guide='none') +
+  scale_shape_discrete(solid = F, guide='none') +
   theme_bw()
 @
 
