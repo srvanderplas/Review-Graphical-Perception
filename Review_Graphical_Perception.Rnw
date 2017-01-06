@@ -419,18 +419,18 @@ The ``software" programs presented in Section \ref{Software} are generally effic
 \hfil
 \begin{subfigure}[b]{.4\linewidth}\centering\vspace{.5cm}
   \includegraphics[width=\linewidth]{FigureVase}\vspace{1cm}
-  \caption{Figure-ground illusion}
+  \caption{Figure-ground illusion\label{fig:fig-ground}}
 \end{subfigure}\hfill
 \begin{subfigure}[b]{.4\linewidth}\centering
   \includegraphics[width=\linewidth]{IllusoryContour}
-  \caption{Kanizsa triangle illusion}
+  \caption{Kanizsa triangle illusion\label{fig:illusorycontour}}
 \end{subfigure}\hfil
 \caption[Gestalt illusions]{Illusions due to misapplied or ambiguous Gestalt rules.}\label{fig:GestaltIllusions}
 \end{figure}
 
-The figure/ground illusion depends on the color of the top and bottom edges of the picture; if the edges are black, the vase appears to be the central part of the image; if the edges are white, the faces appear to be the central part of the image. When the edges are omitted, the image seems to oscillate between a vase and the profile view of two heads. This is a result of ambiguity in identifying which part of the image is the background; when the top and bottom edges are present, that cue is sufficient to resolve the illusion. The Kanizsa triangle demonstrates the Gestalt principles of good form and continuity: We perceive objects that are partially obscured by a floating white triangle, even though no such triangle actually exists. The illusory triangle produces an image that is much simpler (3 circles, a black triangle outline, and a white triangle) than the objects that are actually displayed (3 partial circles and three V shapes arranged pointing in toward a central point). In addition to the existence of the illusory contour, we also perceive some depth to the image; that is, the white triangle is perceived as being above the other components of the image \citep{coren1983subjective}, as this is the only way to make sense of the set of stimuli in a simple fashion. In general, these gestalt principles make sense of the natural world, but when applied to artificial contexts, they occasionally produce unexpected results.
+The figure/ground illusion (Figure \ref{fig:fig-ground}) depends on the color of the top and bottom edges of the picture; if the edges are black, the vase appears to be the central part of the image; if the edges are white, the faces appear to be the central part of the image. When the edges are omitted, the image seems to oscillate between a vase and the profile view of two heads. This is a result of ambiguity in identifying which part of the image is the background; when the top and bottom edges are present, that cue is sufficient to resolve the illusion. The Kanizsa triangle (Figure \ref{fig:illusorycontour}) demonstrates the Gestalt principles of good form and continuity: We perceive objects that are partially obscured by a floating white triangle, even though no such triangle actually exists. The illusory triangle produces an image that is much simpler (3 circles, a black triangle outline, and a white triangle) than the objects that are actually displayed (3 partial circles and three V shapes arranged pointing in toward a central point). In addition to the existence of the illusory contour, we also perceive some depth to the image; that is, the white triangle is perceived as being above the other components of the image \citep{coren1983subjective}, as this is the only way to make sense of the set of stimuli in a simple fashion. In general, these gestalt principles make sense of the natural world, but when applied to artificial contexts, they occasionally produce unexpected results.
 
-\paragraph{Depth illusions} Other optical illusions occur due to the optimization of the visual system for three-dimensional perception. These three-dimensional heuristics can produce unexpected or misleading results when applied to two dimensional objects.
+\paragraph{Depth illusions} Other optical illusions occur due to the optimization of the visual system for three-dimensional perception. These three-dimensional heuristics can produce unexpected or misleading results when applied to two dimensional pictures, such as statistical graphics or other artificially generated images.
 
 \begin{figure}[htbp]\centering
 
@@ -459,7 +459,7 @@ Figure  \ref{fig:DepthIllusions} contains four of the more interesting optical i
 \caption[Muller Lyer real world context]{The Muller-Lyer illusion in a non-ambiguous three-dimensional context.}\label{fig:mullerlyerhouse}
 \end{figure}
 
-Depth illusions in particular result from a conflict between our experience with the three-dimensional world and the appearance of two-dimensional ambiguous stimuli. The Necker cube ``flips" because there are two physical objects that could produce the same retinal image, the Muller-Lyer illusion exists because our experience with the three-dimensional world is harnessed inappropriately for a two-dimensional figure, and the color-constancy illusion exists because our brains automatically correct a pseudo three-dimensional image to represent the reality of that image in the real world. These conflicts occur in statistical graphics as well; the sine illusion is likely a result of implicit depth cues and has been documented in statistical graphics \citep{sineillusionjcgs}.
+Depth illusions in particular result from a conflict between our experience with the three-dimensional world and the appearance of two-dimensional ambiguous stimuli. The Necker cube ``flips" because there are two physical objects that could produce the same retinal image, the Muller-Lyer illusion exists because our experience with the three-dimensional world is harnessed inappropriately for a two-dimensional figure, and the color-constancy illusion exists because our brains automatically correct a pseudo three-dimensional image to represent the reality of that image in the real world. These conflicts occur in statistical graphics as well; the sine illusion \citep{bach} is likely a result of implicit depth cues and has been documented in statistical graphics \citep{sineillusionjcgs}.
 
 There are other optical illusions that have the potential to appear in statistical graphics but are not easily classified (or necessarily easily explained). Two of these illusions are considered below.
 \paragraph{Other Important Optical Illusions}
