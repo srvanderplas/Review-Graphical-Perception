@@ -545,17 +545,20 @@ new_theme_empty$plot.title <- element_blank()
 new_theme_empty$axis.title <- element_blank()
 new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.unit = 3L, class = "unit")
 
+library(dichromat)
+colors <- colorschemes$Categorical.12[c(2, 9)]
+
 data$shape <- c(rep(2, 15), 1, rep(2,20))
 library(scales)
 qplot(data=data, x=x, y=y, color=factor(1, levels=c(1,2)), shape=factor(shape), size=I(5)) +
   scale_shape_manual(guide="none", values=c(19, 15)) +
-  scale_color_discrete(guide="none") +
+  scale_color_manual(guide="none", values = colors) +
   new_theme_empty
 
 data$shape <- c(rep(2, 25), 1, rep(2,10))
 qplot(data=data, x=x, y=y, color=factor(shape), shape=I(19), size=I(5)) +
   scale_shape_manual(guide="none", values=c(19, 15)) +
-  scale_color_discrete(guide="none") +
+  scale_color_manual(guide="none", values = colors) +
   new_theme_empty
 @
 
@@ -577,14 +580,14 @@ new_theme_empty$plot.margin <- structure(c(0, 0, -1, -1), unit = "lines", valid.
 data$shape <- data$color
 qplot(data=data, x=x, y=y, color=factor(color), shape=factor(shape), size=I(5)) +
   scale_shape_manual(guide="none", values=c(19, 15)) +
-  scale_color_discrete(guide="none") +
+  scale_color_manual(guide="none", values = colors) +
   new_theme_empty
 
 
 data$shape[16] <- if(data$shape[16]==2) 1 else 2
 qplot(data=data, x=x, y=y, color=factor(color), shape=factor(shape), size=I(5)) +
   scale_shape_manual(guide="none", values=c(19, 15)) +
-  scale_color_discrete(guide="none") +
+  scale_color_manual(guide="none", values = colors) +
   new_theme_empty
 @
 
