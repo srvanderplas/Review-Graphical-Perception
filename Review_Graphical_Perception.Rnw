@@ -22,6 +22,10 @@
 \usepackage{rotating}
 \usepackage{fullpage}
 
+% Double spacing
+\usepackage{setspace}
+\doublespacing
+
 % Bibliography without numbers or labels
 \usepackage{natbib}
 \bibliographystyle{apa}
