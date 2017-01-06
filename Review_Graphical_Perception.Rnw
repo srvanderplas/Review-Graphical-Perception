@@ -66,6 +66,8 @@ library(gridExtra)
 library(purrr)
 library(grid)
 library(nullabor)
+
+theme_set(theme_bw(base_size = 14))
 @
 \begin{document}
 %-------------------------------------------------------------------------------
