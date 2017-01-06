@@ -188,10 +188,10 @@ Selective attention is generally necessary for perception to occur, though there
 Within the brain, attention is important because it allows the different regions of the brain which process color, shape, and position to integrate these perceptions into a multifaceted mental representation of the object \citep{goldstein}. This process, known as binding, is essential to coherently encode a scene into working memory. Feature integration theory \citep{treisman1980feature} suggests that these separate streams of information are initially encoded in the preattentive stage of object perception; focusing on the object triggers the binding of these separate streams into a single coherent stream of information. Many single features, such as color, length, and texture are \emph{preattentive}, because they can be pinpointed in an image without focused attention (and thus can be located faster), but specific combinations of color and shape require attention (because the features must be bound together) and are thus more difficult to search. Preattentive features are generally processed in parallel (that is, the entire scene is processed nearly simultaneously), while features requiring attention are processed serially. Examples of features processed  serially and in parallel are shown in Figure  \ref{fig:parallelSerialFeatures} \citep[Chapter 6]{helander1997handbook}. The importance of preattentive processing to statistical graphics is discussed in Section \ref{LowLevelGraphics}, which includes a demonstration of preattentive search in Figure  \ref{fig:preattentive}.
 
 \begin{figure}[htbp]\centering
-<<parallel-serial, echo=F, include=T, fig.width=10, fig.height=7, out.width=".9\\linewidth">>=
+<<parallel-serial, echo=F, include=T, fig.width=7, fig.height=5>>=
 
 # Empty theme definition
-new_theme_empty <- theme_bw(base_size=16)
+new_theme_empty <- theme_bw(base_size=12)
 new_theme_empty$line <- element_blank()
 new_theme_empty$strip.text <- element_blank()
 new_theme_empty$axis.text <- element_blank()
@@ -254,10 +254,10 @@ parallel <-
   ggtitle("Parallel Detection")
 
 serial.points <- data.frame(
-    x = c(rep(1:5, times=2), 3.5, 1.75),
+    x = c(rep(1:5, times=2), 3.75, 1.85),
     y = c(rep(c(5, 4), each=5), 2, 2.2),
     shape = c(15, 16, 17, 8, 3, rep(16, 5), 1, 5),
-    size = c(rep(8, 5), c(4, 6, 8, 10, 12), 10, 8)
+    size = c(rep(8, 5), c(4, 6, 8, 10, 12), 8, 8)
   )
 
 serial.lines <- data.frame(
@@ -285,15 +285,15 @@ serial.lines2 <- serial.lines %>%
   ungroup
 
 serial.rects <- data.frame(
-    xmin = c(1.375, 2.1, 2.5),
-    xmax = c(5, 4, 3.25),
+    xmin = c(1.5, 2.3, 2.6),
+    xmax = c(5, 4.5, 3.25),
     ymin = c(1.6, 1.8, 1.9),
     ymax = c(2.4, 2.2, 2.15)
   )
 
 serial.segments <- data.frame(
-  x = c(seq(1.25, 2, length.out=4), seq(2.5, 3.25, length.out=4), rep(4.25, 4)),
-  xend = c(seq(1.25, 2, length.out=4), seq(3, 3.75, length.out=4), rep(5, 4)),
+  x = c(seq(1.45, 2, length.out=4), seq(2.5, 3.25, length.out=4), rep(4.25, 4)),
+  xend = c(seq(1.45, 2, length.out=4), seq(3, 3.75, length.out=4), rep(5, 4)),
   y = c(rep(.625, 4), rev(seq(.5, .9, length.out=4)), seq(.75, 1.25, length.out=4)),
   yend = c(rep(1.375, 4), rev(seq(1, 1.4, length.out=4)), seq(.75, 1.25, length.out=4))
 )
