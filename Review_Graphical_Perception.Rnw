@@ -343,7 +343,7 @@ Figure  \ref{fig:gestaltlaws} shows examples of some of the gestalt laws, which 
 We have discussed how visual stimuli are perceived and how objects are recognized; we now must examine how visual stimuli are encoded into memory. Most researchers believe that visual perceptions are encoded in an analog fashion, so that the memory of an image is closely related to the perception of that same image \citep{cognition}. Other theories \todo{Citation??} suggest that visual perceptions are encoded semantically, that is, the description of a visual scene would be encoded, rather than a mental ``image" of that scene. Both theories are likely at least partially correct, but the analog encoding of visual images is more relevant to statistical graphics because the accuracy of the stored image has the potential to affect recall of the contents of that image (and thus what people remember about a particular graphic). The mental rotation task provides experimental evidence to support analog encoding. In this task, participants must determine whether or not a figure is a rotation of a target figure, as shown in Figure  \ref{fig:mentalRotation}. \citet{shepard1988mental} showed that reaction time was proportional to the angle of rotation of the stimuli, which suggests that participants mentally rotate the figure as they would rotate a three-dimensional figure in space.
 
 \begin{figure}[htbp]\centering
-\includegraphics[width=.7\linewidth]{RotationTask}
+\includegraphics[width=.5\linewidth]{RotationTask}
 \caption[Rotation task]{Rotation task \protect\citep{shepard1988mental}. Are the two images the same?
 %https://en.wikipedia.org/wiki/File:MR_TMR.jpg (Edited)
 }\label{fig:mentalRotation}
@@ -424,15 +424,14 @@ The ``software" programs presented in Section \ref{Software} are generally effic
 \paragraph{Gestalt Illusions} Some illusions occur due to a conflict of gestalt principles. Two of these illusions are shown in Figure  \ref{fig:GestaltIllusions}: the figure/ground illusion, and the illusory contour illusion.
 
 \begin{figure}[htbp]\centering
-\hfil
-\begin{subfigure}[b]{.4\linewidth}\centering\vspace{.5cm}
-  \includegraphics[width=\linewidth]{FigureVase}\vspace{1cm}
+\begin{subfigure}[b]{.3\linewidth}\centering\vspace{.5cm}
+  \includegraphics[width=\linewidth]{FigureVase}\vspace{.5cm}
   \caption{Figure-ground illusion\label{fig:fig-ground}}
-\end{subfigure}\hfill
-\begin{subfigure}[b]{.4\linewidth}\centering
+\end{subfigure}\hspace{1cm}
+\begin{subfigure}[b]{.3\linewidth}\centering
   \includegraphics[width=\linewidth]{IllusoryContour}
   \caption{Kanizsa triangle illusion\label{fig:illusorycontour}}
-\end{subfigure}\hfil
+\end{subfigure}
 \caption[Gestalt illusions]{Illusions due to misapplied or ambiguous Gestalt rules.}\label{fig:GestaltIllusions}
 \end{figure}
 
@@ -667,7 +666,7 @@ qplot(waiting, eruptions, geom="jitter", data=faithful) +
 
 Working within this task-oriented framework, researchers have explored the ``search" portion of the task-based model, the information integration portion of the model, and the types of graphs which facilitate both the ``search" and ``integration" portions of the task. Integration models modify the above sequence to allow for more complex graphical relationships to be assimilated, such that a viewer cycles between stages (2) and (3) several times in order to encode different portions of the graph. The time required for each of these steps may also change in accordance with the reader's familiarity with the task and graphic style; those who are more familiar with similar graphics may be able to encode information faster and in larger chunks and thus answer the question more quickly \citep{carpenter1998model}.
 
-<<clustering, fig.width=4, fig.height=4, echo=F, include=F>>=
+<<clustering, fig.width=3, fig.height=3, echo=F, include=F>>=
 N <- 40
 data <- data.frame(x=c(rnorm(N, 3.5, .3), rnorm(N, 4, .3), rnorm(N, 3, .3)),
                    y=c(rnorm(N, 3, .3), rnorm(N, 4, .3), rnorm(N, 4, .3)),
@@ -891,7 +890,7 @@ This section details the tools specific to the testing of graph perception withi
 \subsubsection{The Grammar of Graphics}
 The grammar of graphics, detailed in \citet{wilkinson2006grammar}, is a framework for describing a graphic in terms of its basic component pieces. An implementation of the grammar of graphics for R, \texttt{ggplot2}\citep{ggplot2, wickham2010layered}, provides a useful tool for manipulating graphics to test in an experimental setting. Using the grammar of graphics, it is easy for experimenters to compare different types of charts using the same data, as the underlying structure of the graph remains the same. Figure  \ref{fig:grammarplots} shows three plots created using the same data and different geometric objects, and Figure  \ref{fig:grammarcode} provides the ggplot2 code to create the plots. Comparing these graphics experimentally would be reasonably simple, and the grammar of graphics helps to control the extraneous variables introduced by utilizing different plot types. In addition, the grammar of graphics approach to transformations and scales allows us to easily test judgments made utilizing different axis transformations and color scales to compare perceptual accuracy \citep{hofmann2012graphical}.
 
-<<irisdatagrammar, echo=FALSE, include=FALSE, fig.width=4, fig.height=4>>=
+<<irisdatagrammar, echo=FALSE, include=FALSE, fig.width=2.5, fig.height=2.5>>=
 # Density plot
 ggplot(data=iris, aes(x=Sepal.Width, group=Species, fill=Species)) +
   geom_density(position="stack") + xlab("Sepal Width") + theme_bw() + theme(legend.position=c(.8, .8))
