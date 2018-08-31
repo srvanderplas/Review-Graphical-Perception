@@ -273,16 +273,15 @@ serial.lines <- data.frame(
   )
 
 serial.lines2 <- serial.lines %>%
-  group_by(group) %>%
-  do({
-  xspline <- data.frame(spline(x = 1:nrow(.), y = .$x, n = 100), group = unique(.$group))
-  yspline <- data.frame(spline(x = 1:nrow(.), y = .$y, n = 100), group = unique(.$group))
+  split(.$group) %>%
+  purrr::map_df(function(.) {
+    xspline <- data.frame(spline(x = 1:nrow(.), y = .$x, n = 100), group = unique(.$group))
+    yspline <- data.frame(spline(x = 1:nrow(.), y = .$y, n = 100), group = unique(.$group))
 
-  tmp <- data.frame(x = xspline$y, y = yspline$y, group = yspline$group)
-  tmp$y <- (tmp$y - mean(tmp$y)) / (max(tmp$y) - min(tmp$y)) / 1.5 + 3
-  return(tmp)
-}) %>%
-  ungroup
+    tmp <- data.frame(x = xspline$y, y = yspline$y, group = yspline$group)
+    tmp$y <- (tmp$y - mean(tmp$y)) / (max(tmp$y) - min(tmp$y)) / 1.5 + 3
+    return(tmp)
+  })
 
 serial.rects <- data.frame(
     xmin = c(1.5, 2.3, 2.6),
